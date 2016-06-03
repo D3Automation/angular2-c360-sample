@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+/* TODO: Move angular2-c360-sample-app styles to angular2-c360-sample.component.css */
+angular2-c360-sample-app {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+}

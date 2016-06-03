@@ -1,0 +1,17 @@
+app-model {
+  flex-direction: row;
+}
+
+#model-props {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  overflow-y: scroll;
+}
+
+c360-viewer {
+  display: flex;
+  flex-grow: 1;
+  margin: 5px;
+}
