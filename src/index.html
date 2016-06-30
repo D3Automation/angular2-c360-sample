@@ -21,18 +21,15 @@
 <body>
   <angular2-c360-sample-app>Loading...</angular2-c360-sample-app>
 
-  
-
     {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
     <script>
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-  
-
-
-
+    
+    <script src="vendor/breeze-client/build/breeze.min.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://configurator360.autodesk.com/Script/v1/EmbeddedViewer"></script>
 </body>
 </html>

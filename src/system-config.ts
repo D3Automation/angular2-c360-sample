@@ -3,10 +3,16 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'angular2-c360': 'vendor/angular2-c360'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-c360': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'angular2-c360.js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
