@@ -4,6 +4,6 @@ export class Angular2C360SamplePage {
   }
 
   getParagraphText() {
-    return element(by.css('angular2-c360-sample-app h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }

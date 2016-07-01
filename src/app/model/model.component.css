@@ -8,6 +8,9 @@ app-model {
   flex-direction: column;
   flex-basis: 50%;
   overflow-y: scroll;
+  height: 500px;
+  width: 600px;
+  
 }
 
 c360-viewer {

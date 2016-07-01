@@ -1,0 +1,21 @@
+/* TODO: Move app-header styles to header.component.css */
+app-header {
+    height: 65px;
+    background-color: #283593;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+/* TODO: Move app-footer styles to footer.component.css */
+app-footer {
+    background-color: #283593;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+app-model {
+  flex-direction: row;
+}

@@ -1,3 +1,7 @@
+// SystemJS configuration file, see links for more information
+// https://github.com/systemjs/systemjs
+// https://github.com/systemjs/systemjs/blob/master/docs/config-api.md
+
 /***********************************************************************************************
  * User Configuration.
  **********************************************************************************************/
@@ -38,6 +42,7 @@ const barrels: string[] = [
   'app/header',
   'app/footer',
   'app/model',
+  'app/c360-prop',
   /** @cli-barrel */
 ];
 

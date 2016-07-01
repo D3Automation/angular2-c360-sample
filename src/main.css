@@ -2,9 +2,20 @@ body {
     margin: 0;
 }
 
-/* TODO: Move angular2-c360-sample-app styles to angular2-c360-sample.component.css */
-angular2-c360-sample-app {
+/* TODO: Move app-root styles to app.component.css */
+app-root {
   height: calc(100vh);
   display: flex;
   flex-direction: column;
+}
+
+#main-content {
+    min-height: calc(100vh - 84px);
+    max-height: calc(100vh - 84px);
+    display: flex;
+}
+
+#c360Viewer {
+  position: absolute;
+  z-index: -1;
 }
