@@ -1,9 +1,7 @@
-<div>
-    <div id="model-props">
-        <div *ngIf="trailer">
-            <c360-prop *ngFor="let prop of trailer.UIProperties; let i = index" [uiProp]="prop"></c360-prop>
-            <button (click)="trailer.CreateDWF()">DWF</button>
-        </div>
-    </div>    
-    <c360-viewer></c360-viewer>    
-</div>
+<div id="model-props">
+    <div *ngIf="trailer">
+        <c360-prop *ngFor="let prop of trailer.UIProperties; let i = index" [uiProp]="prop"></c360-prop>
+        <button (click)="trailer.CreateDWF()">DWF</button>
+    </div>
+</div>    
+<c360-viewer></c360-viewer>    

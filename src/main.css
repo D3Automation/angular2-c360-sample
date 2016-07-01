@@ -19,3 +19,9 @@ app-root {
   position: absolute;
   z-index: -1;
 }
+
+app-model {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
