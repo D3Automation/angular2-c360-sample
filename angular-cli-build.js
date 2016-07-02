@@ -17,7 +17,6 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       'angular2-c360/**/*.+(js|js.map)',
       'breeze-client/build/breeze.min.js',
-      'jquery/dist/jquery.min.js',
       '@angular/**/*.+(js|js.map)'
     ]
   });
