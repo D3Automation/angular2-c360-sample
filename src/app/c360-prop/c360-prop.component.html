@@ -7,7 +7,8 @@
                 [disabled]="uiProp.IsReadOnly" [type]="uiProp.inputType" />
         </div>
     </div>
--->    <div *ngIf="!uiProp.isCheckbox && uiProp.ChoiceList == null" class="form-group">
+-->    
+    <div *ngIf="!uiProp.isCheckbox && uiProp.ChoiceList == null" class="form-group">
         <label class="col-sm-3 control-label">{{uiProp.FullName}}</label>
         <div class="col-sm-9">
             <input #i (blur)="uiProp.BoundValue=i.value" [value]="uiProp.BoundValue" placeholder="uiProp.FullName"
@@ -18,11 +19,13 @@
 
     <div *ngIf="uiProp.ChoiceList != null" class="form-group">
         <label class="col-sm-3 control-label">{{uiProp.FullName}}</label>
-        <select [(ngModel)]="uiProp.BoundValue" class="form-control">
-            <option *ngFor="let choice of uiProp.ChoiceList" [value]="choice.value">
-                {{choice.text}}
-            </option>
-        </select>
+        <div class="col-sm-9">
+            <select [(ngModel)]="uiProp.BoundValue" class="form-control">
+                <option *ngFor="let choice of uiProp.ChoiceList" [value]="choice.value">
+                    {{choice.text}}
+                </option>
+            </select>
+        </div>
     </div>
 
     <div *ngIf="uiProp.isCheckbox" class="form-group">

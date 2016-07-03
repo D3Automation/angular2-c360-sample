@@ -1,4 +1,4 @@
-<div id="model-props">
+<div id="model-props" class="form-horizontal">
     <div *ngIf="trailer">
         <c360-prop *ngFor="let prop of trailer.UIProperties; let i = index" [uiProp]="prop"></c360-prop>
         <button (click)="trailer.CreateDWF()">DWF</button>

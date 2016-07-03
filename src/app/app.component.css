@@ -1,17 +1,11 @@
-/* TODO: Move app-header styles to header.component.css */
-app-header {
-    height: 65px;
-    background-color: #283593;
-    color: white;
-    display: flex;
-    flex-direction: row;
+:host {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
 }
 
-/* TODO: Move app-footer styles to footer.component.css */
-app-footer {
-    background-color: #283593;
-    color: white;
+#main-content {
+    min-height: calc(100vh - 84px);
+    max-height: calc(100vh - 84px);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
