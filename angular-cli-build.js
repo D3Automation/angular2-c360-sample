@@ -16,7 +16,6 @@ module.exports = function(defaults) {
       'reflect-metadata/**/*.+(ts|js|js.map)',
       'rxjs/**/*.+(js|js.map)',
       'angular2-c360/**/*.+(js|js.map)',
-      'breeze-client/build/breeze.min.js',
       '@angular/**/*.+(js|js.map)'
     ]
   });

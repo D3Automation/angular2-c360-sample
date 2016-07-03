@@ -21,9 +21,6 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
-
-  
-
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -33,10 +30,6 @@
       }).catch(console.error.bind(console));
     </script>
     
-    <script src="vendor/breeze-client/build/breeze.min.js"></script>
     <script src="https://configurator360.autodesk.com/Script/v1/EmbeddedViewer"></script>
-
-  
-
 </body>
 </html>
