@@ -7,7 +7,6 @@ import { C360PropComponent } from '../c360-prop';
   selector: 'app-model',
   templateUrl: 'model.component.html',
   styleUrls: ['model.component.css'],
-  providers: [C360ContextService],
   directives: [C360PropComponent,C360ViewerComponent]
 })
 export class ModelComponent implements OnInit {
