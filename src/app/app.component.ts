@@ -10,7 +10,6 @@ import { C360ContextService } from 'angular2-c360';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  providers: [C360ContextService],
   directives: [ROUTER_DIRECTIVES,HeaderComponent,FooterComponent]
 })
 export class AppComponent {
