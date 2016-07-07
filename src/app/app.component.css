@@ -5,7 +5,19 @@
 }
 
 #main-content {
-    min-height: calc(100vh - 84px);
-    max-height: calc(100vh - 84px);
-    display: flex;
+  min-height: calc(100vh - 84px);
+  max-height: calc(100vh - 84px);
+  display: flex;
+}
+
+#busy-indicator {
+  position: absolute;
+  height: calc(100vh - 84px);
+  width: 100%;
+  background: rgba(211, 211, 211, 0.5);
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,5 +1,8 @@
 <app-header></app-header>
 <div id="main-content">
+  <div *ngIf="busy" id="busy-indicator">
+    <img src="images/gears.gif"/>
+  </div>
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

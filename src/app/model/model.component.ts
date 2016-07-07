@@ -14,38 +14,8 @@ export class ModelComponent implements OnInit {
   constructor(private c360Context: C360ContextService) { }
 
   public trailer:any;
-  public busy: boolean = false;
-  public activities: Set<Observable<any>> = new Set<Observable<any>>();
 
   ngOnInit() {
-    this.setupBusyIndicator();
-    
-    return this.c360Context.getNewModel()
-      .subscribe(root => this.trailer = root, (err) => {
-        console.error(err)
-      });
+    this.c360Context.model.subscribe(root => this.trailer = root);
   }
-
-  private setupBusyIndicator() {
-    this.c360Context.modelActivities.subscribe(
-      a => {
-        this.activities.add(a);
-        this.busy = true;
-           
-        a.subscribe(undefined,
-          () => {
-            // TODO: Make this more DRY
-            this.activities.delete(a);
-            this.busy = (this.activities.size > 0);
-          },
-          () => {
-            // TODO: Make this more DRY
-            this.activities.delete(a);
-            this.busy = (this.activities.size > 0);
-          });
-        }, undefined,
-        () => {
-            this.activities.clear();
-        });
-    }
 }
