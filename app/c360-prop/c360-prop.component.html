@@ -1,0 +1,36 @@
+<div *ngIf="uiProp">
+    <div *ngIf="!uiProp.isCheckbox && uiProp.choiceList == null" class="form-group">
+        <label class="col-sm-3 control-label">{{uiProp.fullName}}</label>
+        <div class="col-sm-9">
+            <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="uiProp.fullName"
+                class="form-control" [class.c360-modified]="uiProp.isModified" [class.c360-invalid]="uiProp.errorInfo" 
+                [disabled]="uiProp.isReadOnly" [type]="uiProp.inputType" />
+        </div>
+    </div>
+
+    <div *ngIf="uiProp.choiceList != null" class="form-group">
+        <label class="col-sm-3 control-label">{{uiProp.fullName}}</label>
+        <div class="col-sm-9">
+            <select [(ngModel)]="uiProp.value" class="form-control">
+                <option *ngFor="let choice of uiProp.choiceList" [value]="choice.value">
+                    {{choice.text}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div *ngIf="uiProp.isCheckbox" class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="uiProp.fullName"
+                        class="form-control" [class.c360-modified]="uiProp.isModified" [class.c360-invalid]="uiProp.errorInfo" 
+                        [disabled]="uiProp.isReadOnly" [type]="uiProp.inputType" />
+                        {{uiProp.fullName}}
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <button *ngIf="uiProp.isModified" (click)="uiProp.reset()">Reset</button>
+</div>

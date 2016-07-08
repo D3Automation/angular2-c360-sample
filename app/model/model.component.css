@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    width: 100%;  
+}
+
+#model-props {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  overflow-y: auto;
+  padding: 10px 20px 10px 10px;
+}
+
+c360-viewer {
+  display: flex;
+  flex-grow: 1;
+  margin: 5px;
+}
+
+c360-prop {
+  max-width: 100px;
+  min-width: 100px;
+}
