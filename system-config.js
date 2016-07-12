@@ -38,6 +38,7 @@ var barrels = [
     'app/footer',
     'app/model',
     'app/c360-prop',
+    'app/error',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
