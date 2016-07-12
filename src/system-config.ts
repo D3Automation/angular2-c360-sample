@@ -43,6 +43,7 @@ const barrels: string[] = [
   'app/footer',
   'app/model',
   'app/c360-prop',
+  'app/error',
   /** @cli-barrel */
 ];
 
