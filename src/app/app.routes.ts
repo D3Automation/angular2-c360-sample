@@ -7,6 +7,11 @@ import { C360ContextService } from 'angular2-c360';
 export const routes: RouterConfig = [
   {
     path: '',
+    redirectTo: '/model',
+    pathMatch: 'full'
+  },
+  {
+    path: 'model',
     component: ModelComponent,
     canActivate: [ModelLoadedGuard]
   },
