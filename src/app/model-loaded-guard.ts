@@ -22,6 +22,6 @@ export class ModelLoadedGuard implements CanActivate {
         }).catch(err => {
           this.router.navigate(['/error']);
           return Observable.of(false);
-        });//.take(1);
+        });
   }
 }

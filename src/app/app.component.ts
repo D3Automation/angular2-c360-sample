@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ApplicationRef } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Observable } from 'rxjs/observable';
 import { HeaderComponent } from './header';
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   public busy: boolean = false;
   private activities: Set<Observable<any>> = new Set<Observable<any>>();
 
-  constructor(private c360Context: C360ContextService) {
+  constructor(private c360Context: C360ContextService, private appRef: ApplicationRef) {
     c360Context.setDesignKey("575458448649916390/2gn1dj1tslb4");
   }
 
@@ -36,11 +36,21 @@ export class AppComponent implements OnInit {
             // TODO: Make this more DRY
             this.activities.delete(a);
             this.busy = (this.activities.size > 0);
+            
+            if (!!document["documentMode"]) {
+              // temporary fix for IE11 support
+              this.appRef.tick();
+            }            
           },
           () => {
             // TODO: Make this more DRY
             this.activities.delete(a);
             this.busy = (this.activities.size > 0);
+
+            if (!!document["documentMode"]) {
+              // temporary fix for IE11 support
+              this.appRef.tick();
+            }            
           });
         }, undefined,
         () => {
