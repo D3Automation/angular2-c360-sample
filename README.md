@@ -23,7 +23,7 @@ _**NOTE:** An Angular1 version of the library is also available: https://github.
      * Click **Next** through the default options and then click **Finish** to install
 
 * If you have just installed Node.js in the previous step, **restart your computer before continuing**
-* (angular-cli)[https://github.com/angular/angular-cli] must be installed.  Run the following from the command line (**Node.js must already be installed**):
+* [angular-cli](https://github.com/angular/angular-cli) must be installed.  Run the following from the command line (**Node.js must already be installed**):
 
   ```
   npm install -g angular-cli
