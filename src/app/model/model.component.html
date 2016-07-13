@@ -1,7 +1,6 @@
 <div id="model-props" class="form-horizontal">
-    <div *ngIf="trailer">
-        <c360-prop *ngFor="let prop of trailer.uiProperties; let i = index" [uiProp]="prop"></c360-prop>
-        <button (click)="trailer.CreateDWF()">DWF</button>
+    <div *ngIf="rootPart">
+        <c360-prop *ngFor="let prop of rootPart.uiProperties; let i = index" [uiProp]="prop"></c360-prop>
     </div>
 </div>    
 <c360-viewer></c360-viewer>    

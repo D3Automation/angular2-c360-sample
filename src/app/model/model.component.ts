@@ -13,9 +13,9 @@ import { C360PropComponent } from '../c360-prop';
 export class ModelComponent implements OnInit {
   constructor(private c360Context: C360ContextService) { }
 
-  public trailer:any;
+  public rootPart:any;
 
   ngOnInit() {
-    this.c360Context.model.subscribe(root => this.trailer = root);
+    this.c360Context.model.subscribe(root => this.rootPart = root);
   }
 }
