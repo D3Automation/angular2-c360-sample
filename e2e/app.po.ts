@@ -1,3 +1,5 @@
+import { browser, element, by } from 'protractor/globals';
+
 export class Angular2C360SamplePage {
   navigateTo() {
     return browser.get('/');

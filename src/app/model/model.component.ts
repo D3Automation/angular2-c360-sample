@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/observable';
 import { C360ContextService } from 'angular2-c360';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-model',
   templateUrl: 'model.component.html',
   styleUrls: ['model.component.css']

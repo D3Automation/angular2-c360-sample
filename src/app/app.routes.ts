@@ -21,4 +21,8 @@ const routes: Routes = [
   }  
 ];
 
+export const appRoutingProviders: any[] = [
+  ModelLoadedGuard
+];
+
 export const routing = RouterModule.forRoot(routes);
