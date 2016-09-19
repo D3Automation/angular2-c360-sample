@@ -38,8 +38,7 @@ describe('Component: Footer', () => {
   selector: 'test',
   template: `
     <app-footer></app-footer>
-  `,
-  directives: [FooterComponent]
+  `
 })
 class FooterComponentTestController {
 }

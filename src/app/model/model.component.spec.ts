@@ -38,8 +38,7 @@ describe('Component: Model', () => {
   selector: 'test',
   template: `
     <app-model></app-model>
-  `,
-  directives: [ModelComponent]
+  `
 })
 class ModelComponentTestController {
 }

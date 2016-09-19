@@ -1,10 +1,10 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ModelComponent } from './model';
 import { ModelLoadedGuard } from './model-loaded-guard';
 import { ErrorComponent } from './error';
 import { C360ContextService } from 'angular2-c360';
 
-export const routes: RouterConfig = [
+const routes: Routes = [
   {
     path: '',
     redirectTo: '/model',
@@ -21,8 +21,4 @@ export const routes: RouterConfig = [
   }  
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-  provideRouter(routes),
-  ModelLoadedGuard,
-  C360ContextService
-];
+export const routing = RouterModule.forRoot(routes);

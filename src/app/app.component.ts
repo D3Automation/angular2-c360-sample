@@ -1,17 +1,12 @@
 import { Component, OnInit, ApplicationRef } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Observable } from 'rxjs/observable';
-import { HeaderComponent } from './header';
-import { FooterComponent } from './footer';
-import { ModelComponent } from './model';
 import { C360ContextService } from 'angular2-c360';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  directives: [ROUTER_DIRECTIVES,HeaderComponent,FooterComponent]
+  styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
   public busy: boolean = false;
