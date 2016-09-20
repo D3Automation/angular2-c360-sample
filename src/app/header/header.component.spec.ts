@@ -38,8 +38,7 @@ describe('Component: Header', () => {
   selector: 'test',
   template: `
     <app-header></app-header>
-  `,
-  directives: [HeaderComponent]
+  `
 })
 class HeaderComponentTestController {
 }

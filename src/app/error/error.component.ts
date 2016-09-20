@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 declare var ADSK: any;
 
 @Component({
-  moduleId: module.id,
   selector: 'app-error',
   templateUrl: 'error.component.html',
   styleUrls: ['error.component.css']
