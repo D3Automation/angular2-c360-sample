@@ -12,13 +12,14 @@ import { ErrorComponent } from './error';
 import { FooterComponent } from './footer';
 import { HeaderComponent } from './header';
 import { ModelComponent } from './model';
+import { LoggingModelAdapter } from './LoggingModelAdapter';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    AngularC360Module
+    AngularC360Module.forRoot({designKey: "575458448649916390/2gn1dj1tslb4"}, new LoggingModelAdapter())
   ],
   declarations: [
     AppComponent,

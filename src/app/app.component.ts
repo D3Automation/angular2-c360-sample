@@ -11,9 +11,7 @@ export class AppComponent implements OnInit {
   public busy: boolean = false;
   private activities: Set<Observable<any>> = new Set<Observable<any>>();
 
-  constructor(private c360Context: C360ContextService, private appRef: ApplicationRef) {
-    c360Context.setDesignKey("575458448649916390/2gn1dj1tslb4");
-  }
+  constructor(private c360Context: C360ContextService, private appRef: ApplicationRef) {}
 
   ngOnInit() {
     this.setupBusyIndicator();
