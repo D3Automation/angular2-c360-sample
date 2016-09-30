@@ -13,6 +13,8 @@ import { FooterComponent } from './footer';
 import { HeaderComponent } from './header';
 import { ModelComponent } from './model';
 import { LoggingModelAdapter } from './LoggingModelAdapter';
+import { ModelNoGraphicsComponent } from './model-no-graphics/model-no-graphics.component';
+import { ModelGraphicsOnlyComponent } from './model-graphics-only/model-graphics-only.component';
 
 @NgModule({
   imports: [
@@ -27,7 +29,7 @@ import { LoggingModelAdapter } from './LoggingModelAdapter';
     ErrorComponent,
     FooterComponent,
     HeaderComponent,
-    ModelComponent
+    ModelComponent, ModelNoGraphicsComponent, ModelGraphicsOnlyComponent
   ],
   providers: [
     appRoutingProviders

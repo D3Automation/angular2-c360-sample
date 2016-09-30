@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    width: 100%;  
+    padding: 10px;
+    justify-content: center;
+}
+
+#model-props {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

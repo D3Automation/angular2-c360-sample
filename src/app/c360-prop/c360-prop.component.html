@@ -1,15 +1,15 @@
 <div *ngIf="uiProp">
     <div *ngIf="!uiProp.isCheckbox && uiProp.choiceList == null" class="form-group">
-        <label class="col-sm-3 control-label">{{uiProp.fullName}}</label>
+        <label class="col-sm-3 control-label">{{labelText}}</label>
         <div class="col-sm-9">
-            <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="uiProp.fullName"
+            <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="labelText"
                 class="form-control" [class.c360-modified]="uiProp.isModified" [class.c360-invalid]="uiProp.errorInfo" 
                 [disabled]="uiProp.isReadOnly" [type]="uiProp.inputType" />
         </div>
     </div>
 
     <div *ngIf="uiProp.choiceList != null" class="form-group">
-        <label class="col-sm-3 control-label">{{uiProp.fullName}}</label>
+        <label class="col-sm-3 control-label">{{labelText}}</label>
         <div class="col-sm-9">
             <select [(ngModel)]="uiProp.value" class="form-control">
                 <option *ngFor="let choice of uiProp.choiceList" [value]="choice.value">
@@ -23,10 +23,10 @@
         <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
                 <label>
-                    <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="uiProp.fullName"
+                    <input #i (blur)="uiProp.value=i.value" [value]="uiProp.value" placeholder="labelText"
                         class="form-control" [class.c360-modified]="uiProp.isModified" [class.c360-invalid]="uiProp.errorInfo" 
                         [disabled]="uiProp.isReadOnly" [type]="uiProp.inputType" />
-                        {{uiProp.fullName}}
+                        {{labelText}}
                 </label>
             </div>
         </div>
