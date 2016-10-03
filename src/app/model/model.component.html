@@ -1,10 +1,10 @@
 <div id="model-props" class="form-horizontal">
     <!-- Show a specific property (or properties) -->
-    <!--<div *ngIf="rootPart">
-        <c360-prop [uiProp]="rootPart.Usage"></c360-prop>
+<!--    <div *ngIf="rootPart">
+        <c360-prop [uiProp]="rootPart.Usage" [labelText]="'Trailer Usage'"></c360-prop>
         <c360-prop [uiProp]="rootPart.FrameColor"></c360-prop>
-    </div>-->
-
+    </div>
+-->
     <!-- Show all properties -->
     <div *ngIf="rootPart">
         <c360-prop *ngFor="let prop of rootPart.uiProperties" [uiProp]="prop"></c360-prop>
