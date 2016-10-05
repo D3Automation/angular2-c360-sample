@@ -15,6 +15,7 @@ import { ModelComponent } from './model';
 import { LoggingModelAdapter } from './LoggingModelAdapter';
 import { ModelNoGraphicsComponent } from './model-no-graphics/model-no-graphics.component';
 import { ModelGraphicsOnlyComponent } from './model-graphics-only/model-graphics-only.component';
+import { BusyIndicatorComponent } from './busy-indicator/busy-indicator.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { ModelGraphicsOnlyComponent } from './model-graphics-only/model-graphics
     ErrorComponent,
     FooterComponent,
     HeaderComponent,
-    ModelComponent, ModelNoGraphicsComponent, ModelGraphicsOnlyComponent
+    ModelComponent, ModelNoGraphicsComponent, ModelGraphicsOnlyComponent, BusyIndicatorComponent
   ],
   providers: [
     appRoutingProviders
