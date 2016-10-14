@@ -56,12 +56,10 @@ Once you have the application running, you will probably want to configure it to
  * [C360 Auto-update Options](https://configurator360.autodesk.com/Dashboard/Options/AutoUpdateSetup)
    * Must select either "Let user choose" or "Always on" for the "Auto-update" setting
 
-After your design has been created and configured as stated above, you will need to set your design key within _src\app\app.component.ts_.  The design key is the unique identifier for your design within C360 (i.e. all text to the right of the "https://configurator360.autodesk.com/" text in your C360 design URL).  In the following code, you will need to replace the _575458448649916390/2gn1dj1tslb4_ key with your own:
-  ```javascript
-    constructor(private c360Context: C360ContextService) {
-      c360Context.setDesignKey("575458448649916390/2gn1dj1tslb4");
-    }
-  ```
+After your design has been created and configured as stated above, you will need to set your design key within _src\app\app.module.ts_.  The design key is the unique identifier for your design within C360 (i.e. all text to the right of the "https://configurator360.autodesk.com/" text in your C360 design URL).  In the following code, you will need to replace the _575458448649916390/2gn1dj1tslb4_ key with your own:
+```typescript
+AngularC360Module.forRoot({designKey: "575458448649916390/2gn1dj1tslb4"}, new LoggingModelAdapter())
+```
 
 ## Authors
 
