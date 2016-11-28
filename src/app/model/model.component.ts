@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/observable';
-import { C360ContextService } from 'angular2-c360';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
+import { C360ContextService, UIPart } from 'angular2-c360';
 
 @Component({
   selector: 'app-model',
@@ -8,11 +9,17 @@ import { C360ContextService } from 'angular2-c360';
   styleUrls: ['model.component.css']
 })
 export class ModelComponent implements OnInit {
-  constructor(private c360Context: C360ContextService) { }
+  constructor(private c360Context: C360ContextService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
-  public rootPart:any;
+  public part:UIPart;
 
   ngOnInit() {
-    this.c360Context.model.subscribe(root => this.rootPart = root);
+    this.route.data.forEach((data: { part: UIPart }) => {
+      this.part = data.part;
+    });
+    //this.c360Context.model.subscribe(root => this.rootPart = root);
   }
 }

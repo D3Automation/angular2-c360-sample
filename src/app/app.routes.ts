@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModelComponent } from './model';
 import { ModelNoGraphicsComponent } from './model-no-graphics/model-no-graphics.component';
 import { ModelGraphicsOnlyComponent } from './model-graphics-only/model-graphics-only.component';
-import { ModelLoadedGuard } from './model-loaded-guard';
+import { PartResolver } from './part-resolver.service';
 import { ErrorComponent } from './error';
 import { C360ContextService } from 'angular2-c360';
 
@@ -15,17 +15,23 @@ const routes: Routes = [
   {
     path: 'model',
     component: ModelComponent,
-    canActivate: [ModelLoadedGuard]
+    resolve: {
+      part: PartResolver
+    }
   },
   {
     path: 'nographics',
     component: ModelNoGraphicsComponent,
-    canActivate: [ModelLoadedGuard]
+    resolve: {
+      part: PartResolver
+    }
   },
   {
     path: 'graphicsonly',
     component: ModelGraphicsOnlyComponent,
-    canActivate: [ModelLoadedGuard]
+    resolve: {
+      part: PartResolver
+    }
   },
   {
     path: 'error',
@@ -34,7 +40,7 @@ const routes: Routes = [
 ];
 
 export const appRoutingProviders: any[] = [
-  ModelLoadedGuard
+  PartResolver
 ];
 
 export const routing = RouterModule.forRoot(routes);

@@ -12,7 +12,7 @@ import { ErrorComponent } from './error';
 import { FooterComponent } from './footer';
 import { HeaderComponent } from './header';
 import { ModelComponent } from './model';
-import { LoggingModelAdapter } from './LoggingModelAdapter';
+import { LoggingModelAdapter } from './logging-model-adapter';
 import { ModelNoGraphicsComponent } from './model-no-graphics/model-no-graphics.component';
 import { ModelGraphicsOnlyComponent } from './model-graphics-only/model-graphics-only.component';
 import { BusyIndicatorComponent } from './busy-indicator/busy-indicator.component';

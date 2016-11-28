@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Rx';
 import { C360ContextService } from 'angular2-c360';
 
 @Component({

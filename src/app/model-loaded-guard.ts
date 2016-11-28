@@ -14,15 +14,14 @@ export class ModelLoadedGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
       if (this.c360Context.isModelLoaded()) {
-        return Observable.of(true);
+        return Promise.resolve(true);
       }
       else {
         return this.c360Context.getNewModel()
-          .map(root => {
-            return this.c360Context.isModelLoaded();
-          }).catch(err => {
+          .then(root => { return true; })
+          .catch(err => {
             this.router.navigate(['/error']);
-            return Observable.of(false);
+            return Promise.resolve(false);
           });
       }
   }
