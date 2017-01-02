@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div id="main-content">
-  <busy-indicator *ngIf="isBusy"></busy-indicator>
+  <busy-indicator *ngIf="busy | async"></busy-indicator>
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

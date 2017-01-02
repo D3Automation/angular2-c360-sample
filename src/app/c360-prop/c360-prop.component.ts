@@ -3,8 +3,8 @@ import { UIProperty } from 'angular2-c360';
 
 @Component({
   selector: 'c360-prop',
-  templateUrl: 'c360-prop.component.html',
-  styleUrls: ['c360-prop.component.css']
+  templateUrl: './c360-prop.component.html',
+  styleUrls: ['./c360-prop.component.css']
 })
 export class C360PropComponent implements OnInit {
   @Input()
