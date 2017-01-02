@@ -7,7 +7,7 @@ import { C360ContextService, UIPart } from 'angular2-c360';
 export class PartResolver implements Resolve<UIPart> {
   constructor(private c360Context: C360ContextService, private router: Router) {}
 
-  resolve(route: ActivatedRouteSnapshot): Promise<UIPart>|boolean {
+  resolve(route: ActivatedRouteSnapshot): Promise<UIPart> {
     let refChain = route.params['refChain'];
 
     if (!refChain) {
@@ -22,7 +22,6 @@ export class PartResolver implements Resolve<UIPart> {
         .then(root => { return this.c360Context.getPartByRefChain(refChain); })
         .catch(err => {
           this.router.navigate(['/error']);
-          return false;
         });
     }
   }
